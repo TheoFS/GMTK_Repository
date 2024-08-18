@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public string nextLevelName;
     public int wienerPoints;
-    public bool defeated, shrinking;
-
+    public bool defeated, victorious, shrinking;
+    public LayerMask layerMask;
     public List<GameObject> torsoList;
 
     [SerializeField]
@@ -16,6 +17,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     float defeatDuration;
     [SerializeField]
+    float victoryDuration;
+    [SerializeField]
     GameObject torsoPrefab;
 
 
@@ -24,9 +27,11 @@ public class PlayerManager : MonoBehaviour
 
     ChangeSceneBehaviour changeSceneScript;
 
-    Vector3 newDirection, currentDirection, lastPosition, currentPosition, newPosition;
+    Vector3 newDirection, lastPosition, currentPosition, newPosition;
 
-    float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer;
+    public Vector3 currentDirection;
+
+    float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer, victoryTimer;
 
     int torsoIndex;
 
@@ -45,14 +50,16 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         GetPlayerInput();
-        DefineMovementDirection();
+        
 
         if(!EmptyNewPosition() || wienerPoints <= 0)
         {
             defeated = true;
             Debug.Log("Defeated");
         }
-        
+
+        DefineMovementDirection();
+
         if (!defeated)
         {
             if (!shrinking)
@@ -122,7 +129,7 @@ public class PlayerManager : MonoBehaviour
     
     private bool  EmptyNewPosition()
     {
-        if (Physics.Raycast(transform.position, currentDirection, out RaycastHit hitInfo, 1f))
+        if (Physics.Raycast(transform.position, currentDirection, out RaycastHit hitInfo, 1f, layerMask))
         {
             Debug.Log("I hit the " + hitInfo.collider.name);
             return false;            
@@ -171,25 +178,61 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            shrinking = false;
-            torsoIndex = 0;
-            /*for( int i = 0; i < torsoList.Count; i++)
+            if (victorious)
             {
-                GameObject.Destroy(torsoList[i]);
-            }*/
-            torsoList.Clear();
+                newDirection = Vector3.zero;
+                ManageVictory();
+            }
+            else
+            {
+                shrinking = false;
+                torsoIndex = 0;
+                torsoList.Clear();
+                newDirection = Vector3.zero;
+            }
+            
         }
     }
 
+    private void ManageVictory()
+    {
+        if (victoryTimer < victoryDuration)
+        {
+            victoryTimer += Time.deltaTime;
+            //Comporamentos de VITÓRIA!!!
+        }
+        else
+        {
+            changeSceneScript.ChangeScene(nextLevelName);
+        }
+    }
     private void ManageDefeat()
     {        
         if(defeatTimer < defeatDuration)
         {
             defeatTimer += Time.deltaTime;
+            //COMPORTAMENTOS DE DERROTA!
         }
         else
         {
             changeSceneScript.ReloadScene();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Im triggerd by " + other.name);
+        
+        if(other.tag == "CheckPoint")
+        {
+            Debug.Log("It was a checkpoint!");
+            shrinking = true;
+        }
+
+        if(other.tag == "FinishLine")
+        {
+            shrinking = true;
+            victorious = true;
         }
     }
 }
