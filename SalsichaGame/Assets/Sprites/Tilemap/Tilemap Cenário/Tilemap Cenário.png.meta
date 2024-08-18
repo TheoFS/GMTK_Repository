@@ -1,0 +1,2019 @@
+fileFormatVersion: 2
+guid: 2f885e02277164c4ea60fe45f63877e9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 145
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_0"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6671d22bfac267428c80690b46966f2
+      internalID: -1209979708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_1"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb83c46c73ffd1409fcb4e83cad9c57
+      internalID: 835218278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_2"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265795066163093478df48f71d8ed980
+      internalID: -374162322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_3"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b2427db88d15e4bae8e577edb6adbc
+      internalID: -2140907821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_4"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e963cad8ddd2842a73663e75de48db
+      internalID: -1793576057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_5"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c54dc150f94774e953d61ed274819b
+      internalID: -750093559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_6"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f726058f3739544babd1eee3168b52
+      internalID: -2024987715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_7"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1311
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554f219b4ad521e40bdc96369eda9ba7
+      internalID: -1177313116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_8"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad1f8c9a1eb9c84991ef1aa1013c94f
+      internalID: -810043102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_9"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1120463f4105864bb481148e9ab0f0b
+      internalID: -1951377697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_10"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be9a4dfec7882548a5b785d6271b7fe
+      internalID: 1332874809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_11"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de910cfc5f183f43ab835b500262b3e
+      internalID: -75656466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_12"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bf129efb78d604f9810146c41e5dd9
+      internalID: 1384174193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_13"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912fbc85f4ca0dd40af0af9548597eb3
+      internalID: 992784830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_14"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d357063b9954c5140ae80e322a153f4d
+      internalID: 1949975938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_15"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795b61977318c7741952a59d975c6a5d
+      internalID: -1980381920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_16"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 1166
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e8d39a46782874693982834964b1f2
+      internalID: -376918931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_17"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5651a9459cefcaa478e96e3c38c137d9
+      internalID: 2127221632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_18"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666c57b1531b0c84788510cdbbedadc9
+      internalID: -685284157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_19"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a385bafc0bf13f74ea811432f9567a34
+      internalID: 165415931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_20"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f288c9cbe47294ca885e34c45f9a27
+      internalID: -1436097782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_21"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9353433737042d049a5581b687e435cf
+      internalID: -854393933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_22"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f4a5bd14102044aa636ab23096db82
+      internalID: 458288028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_23"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 1021
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1ba221105eccf4c845685ad44e6e5d
+      internalID: -720522908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_24"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618fa2761aeeb19439bfad12e3487a24
+      internalID: 1280485150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_25"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25bded8999cd1b4daa3f948f4c85064
+      internalID: 1737543065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_26"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735bcc4ef9774e6409d0b4165161c7b1
+      internalID: 664632401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_27"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04364cba6ddce8b48b81be2b773e3ecd
+      internalID: 1457658521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_28"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1194cb7953d1f3a48aa0b87acba8e629
+      internalID: -961010980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_29"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cd9c7f4e5997447bb3db5ff90d7d4f
+      internalID: 1716545807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_30"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c03cd9637822b41a1ac769c58a2da3
+      internalID: -1487398581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_31"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c22a7bbb3fb543489036710bbc713cf
+      internalID: 1977864793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_32"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1913c366b61ad944ca4809b8d7644558
+      internalID: 1750931991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_33"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 876
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d760a4ca1052fd748863e35905ddd61e
+      internalID: 1839589088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_34"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94025679092975d458f74e79d2819688
+      internalID: -1678264263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_35"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e352f18e02708e34c8ea60c273fcbf4c
+      internalID: -1210654995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_36"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54061da4168f34d4e864c37e1945852f
+      internalID: -552278265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_37"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e452becf52b004e83d27031cdfece7
+      internalID: 1840116975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_38"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e4eac851ee5064d853869634ec2cd3
+      internalID: -1142245140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_39"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6310206a36fbb49a69a5aa61c3db25
+      internalID: 744703313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_40"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f474394a33d0e54db011a11db3e0f2a
+      internalID: -98208754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_41"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66abc0b592290224fb89eab8623e0e48
+      internalID: -709278670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_42"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6765367560c99454081f83ae0a84e959
+      internalID: -83680616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_43"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 731
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51061a40f7b7714cb1eee8466a4ea78
+      internalID: 1464414844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_44"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67f5a9011995904dbd8d2af7e30c40b
+      internalID: -1061451784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_45"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849714a822805ba4a821177b35862970
+      internalID: 1227066043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_46"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5aed12b0c9ee44d914a2ad9a1ead7f
+      internalID: 1712354023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_47"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c938510c5a51f4aabe0b7558674385
+      internalID: -1707388540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_48"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa002599e2ff35a489b0df553dda199d
+      internalID: 910185319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_49"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a83bbd7cb62884089bfa6f839a5087
+      internalID: -404574000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_50"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 586
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cf50d5bf8847c409e02f0ed8d91691
+      internalID: -385988639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_51"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe89a92497d42548adf3b5e2e92cd9d
+      internalID: 2008109049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_52"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fcd258d467fbb45963dc8ba1a888f5
+      internalID: -309260329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_53"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8842807ccffbde468c9dda7ef5463fb
+      internalID: 2020246496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_54"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5d9e6862cfec94987d72b1d8804e4a
+      internalID: -2034848788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_55"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8891b4fae8a0127428014c240ebee6c7
+      internalID: 1183059548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_56"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a7be18cffa24a4490685deeedc57a0
+      internalID: -990741150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_57"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5849e2c4708e97042b438b7f2d01cd7a
+      internalID: -563335202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_58"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 441
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3874546c376bc4ea6fcffc99078165
+      internalID: 673950155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_59"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81d7ad08b6acbe4184e76a998f07578
+      internalID: -483850658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_60"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5a2c4b00f3e2847a4636e3d6b3b32a
+      internalID: 1315097402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_61"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec8e7c7ad54de24d9383e56ec343994
+      internalID: -1921178237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_62"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b650aaef6563c429c08b22d15c620b
+      internalID: -2100874418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_63"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994ce384db4a37a4996ae3e236c74e5d
+      internalID: -84475666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_64"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd9babf85544564aab6829ec10384ed
+      internalID: -2141625526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_65"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40fa81cb3226344a8633fcc58a879bd
+      internalID: -1833631981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_66"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809ed1c623f294b429eba8afe798d467
+      internalID: 1272330878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_67"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ce92934a3cdd248910f320c2d955ff
+      internalID: -1639060288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_68"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 296
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c71b5339b773b49ad86604761fb641
+      internalID: -1854418027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_69"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6a86c8310d27c459929320013d10f0
+      internalID: 1127949509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_70"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7251b3249a941a47b207d9edab9b152
+      internalID: -1843393045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_71"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17018c960eec6944bb39fde44b0bd001
+      internalID: -1658981458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_72"
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0073018ab26c16d488813e9a203a1044
+      internalID: 1422110841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_73"
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428af725956d18f4c858076b448334cd
+      internalID: 1830642469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_74"
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb9b5bb7bfa7fa4cb9e3070889a1f46
+      internalID: -1276104496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_75"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3cbdf009ea73a47aab98b02f1195d3
+      internalID: -1187516197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_76"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f11c646c1b9c74286568eb140472d4
+      internalID: 1246562714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_77"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446279b9883568e4d86a01203dee574e
+      internalID: -1195164130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_78"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 151
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1235b22945c2e214ab957aebd63dfd45
+      internalID: -1270525058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_79"
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9513dda89adba4c970270cd8bb39f4
+      internalID: -1794711879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_80"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ba4997636f2544083573bad80f7945
+      internalID: -1912148103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_81"
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137e6e549915f014ea681a4760f2ee18
+      internalID: 1661833076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_82"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e85185a0582f274ca8e2baca1a7518f
+      internalID: -535175394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_83"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fe4a8289db3d24cbf187ee3eb17642
+      internalID: 1713531357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_84"
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794d39d2dc5da984599c65ffc0c329ef
+      internalID: -1081278093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Tilemap Cen\xE1rio_85"
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 6
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390239c894a93fe4fb8a7ab3cd12976b
+      internalID: -99144679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7a4e49133daae4541a4e2abea2864a56
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Tilemap Cen\xE1rio_0": -1209979708
+      "Tilemap Cen\xE1rio_1": 835218278
+      "Tilemap Cen\xE1rio_10": 1332874809
+      "Tilemap Cen\xE1rio_11": -75656466
+      "Tilemap Cen\xE1rio_12": 1384174193
+      "Tilemap Cen\xE1rio_13": 992784830
+      "Tilemap Cen\xE1rio_14": 1949975938
+      "Tilemap Cen\xE1rio_15": -1980381920
+      "Tilemap Cen\xE1rio_16": -376918931
+      "Tilemap Cen\xE1rio_17": 2127221632
+      "Tilemap Cen\xE1rio_18": -685284157
+      "Tilemap Cen\xE1rio_19": 165415931
+      "Tilemap Cen\xE1rio_2": -374162322
+      "Tilemap Cen\xE1rio_20": -1436097782
+      "Tilemap Cen\xE1rio_21": -854393933
+      "Tilemap Cen\xE1rio_22": 458288028
+      "Tilemap Cen\xE1rio_23": -720522908
+      "Tilemap Cen\xE1rio_24": 1280485150
+      "Tilemap Cen\xE1rio_25": 1737543065
+      "Tilemap Cen\xE1rio_26": 664632401
+      "Tilemap Cen\xE1rio_27": 1457658521
+      "Tilemap Cen\xE1rio_28": -961010980
+      "Tilemap Cen\xE1rio_29": 1716545807
+      "Tilemap Cen\xE1rio_3": -2140907821
+      "Tilemap Cen\xE1rio_30": -1487398581
+      "Tilemap Cen\xE1rio_31": 1977864793
+      "Tilemap Cen\xE1rio_32": 1750931991
+      "Tilemap Cen\xE1rio_33": 1839589088
+      "Tilemap Cen\xE1rio_34": -1678264263
+      "Tilemap Cen\xE1rio_35": -1210654995
+      "Tilemap Cen\xE1rio_36": -552278265
+      "Tilemap Cen\xE1rio_37": 1840116975
+      "Tilemap Cen\xE1rio_38": -1142245140
+      "Tilemap Cen\xE1rio_39": 744703313
+      "Tilemap Cen\xE1rio_4": -1793576057
+      "Tilemap Cen\xE1rio_40": -98208754
+      "Tilemap Cen\xE1rio_41": -709278670
+      "Tilemap Cen\xE1rio_42": -83680616
+      "Tilemap Cen\xE1rio_43": 1464414844
+      "Tilemap Cen\xE1rio_44": -1061451784
+      "Tilemap Cen\xE1rio_45": 1227066043
+      "Tilemap Cen\xE1rio_46": 1712354023
+      "Tilemap Cen\xE1rio_47": -1707388540
+      "Tilemap Cen\xE1rio_48": 910185319
+      "Tilemap Cen\xE1rio_49": -404574000
+      "Tilemap Cen\xE1rio_5": -750093559
+      "Tilemap Cen\xE1rio_50": -385988639
+      "Tilemap Cen\xE1rio_51": 2008109049
+      "Tilemap Cen\xE1rio_52": -309260329
+      "Tilemap Cen\xE1rio_53": 2020246496
+      "Tilemap Cen\xE1rio_54": -2034848788
+      "Tilemap Cen\xE1rio_55": 1183059548
+      "Tilemap Cen\xE1rio_56": -990741150
+      "Tilemap Cen\xE1rio_57": -563335202
+      "Tilemap Cen\xE1rio_58": 673950155
+      "Tilemap Cen\xE1rio_59": -483850658
+      "Tilemap Cen\xE1rio_6": -2024987715
+      "Tilemap Cen\xE1rio_60": 1315097402
+      "Tilemap Cen\xE1rio_61": -1921178237
+      "Tilemap Cen\xE1rio_62": -2100874418
+      "Tilemap Cen\xE1rio_63": -84475666
+      "Tilemap Cen\xE1rio_64": -2141625526
+      "Tilemap Cen\xE1rio_65": -1833631981
+      "Tilemap Cen\xE1rio_66": 1272330878
+      "Tilemap Cen\xE1rio_67": -1639060288
+      "Tilemap Cen\xE1rio_68": -1854418027
+      "Tilemap Cen\xE1rio_69": 1127949509
+      "Tilemap Cen\xE1rio_7": -1177313116
+      "Tilemap Cen\xE1rio_70": -1843393045
+      "Tilemap Cen\xE1rio_71": -1658981458
+      "Tilemap Cen\xE1rio_72": 1422110841
+      "Tilemap Cen\xE1rio_73": 1830642469
+      "Tilemap Cen\xE1rio_74": -1276104496
+      "Tilemap Cen\xE1rio_75": -1187516197
+      "Tilemap Cen\xE1rio_76": 1246562714
+      "Tilemap Cen\xE1rio_77": -1195164130
+      "Tilemap Cen\xE1rio_78": -1270525058
+      "Tilemap Cen\xE1rio_79": -1794711879
+      "Tilemap Cen\xE1rio_8": -810043102
+      "Tilemap Cen\xE1rio_80": -1912148103
+      "Tilemap Cen\xE1rio_81": 1661833076
+      "Tilemap Cen\xE1rio_82": -535175394
+      "Tilemap Cen\xE1rio_83": 1713531357
+      "Tilemap Cen\xE1rio_84": -1081278093
+      "Tilemap Cen\xE1rio_85": -99144679
+      "Tilemap Cen\xE1rio_9": -1951377697
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
