@@ -22,6 +22,7 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         changeSceneBehaviourScript.ChangeScene("MenuScene");
     }
 
