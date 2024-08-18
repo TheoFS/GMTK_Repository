@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public int wienerPoints;
     public bool defeated, shrinking;
-
+    public LayerMask layerMask;
     public List<GameObject> torsoList;
 
     [SerializeField]
@@ -24,7 +24,9 @@ public class PlayerManager : MonoBehaviour
 
     ChangeSceneBehaviour changeSceneScript;
 
-    Vector3 newDirection, currentDirection, lastPosition, currentPosition, newPosition;
+    Vector3 newDirection, lastPosition, currentPosition, newPosition;
+
+    public Vector3 currentDirection;
 
     float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer;
 
@@ -45,14 +47,16 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         GetPlayerInput();
-        DefineMovementDirection();
+        
 
         if(!EmptyNewPosition() || wienerPoints <= 0)
         {
             defeated = true;
             Debug.Log("Defeated");
         }
-        
+
+        DefineMovementDirection();
+
         if (!defeated)
         {
             if (!shrinking)
@@ -122,7 +126,7 @@ public class PlayerManager : MonoBehaviour
     
     private bool  EmptyNewPosition()
     {
-        if (Physics.Raycast(transform.position, currentDirection, out RaycastHit hitInfo, 1f))
+        if (Physics.Raycast(transform.position, currentDirection, out RaycastHit hitInfo, 1f, layerMask))
         {
             Debug.Log("I hit the " + hitInfo.collider.name);
             return false;            
@@ -172,12 +176,9 @@ public class PlayerManager : MonoBehaviour
         else
         {
             shrinking = false;
-            torsoIndex = 0;
-            /*for( int i = 0; i < torsoList.Count; i++)
-            {
-                GameObject.Destroy(torsoList[i]);
-            }*/
+            torsoIndex = 0;          
             torsoList.Clear();
+            newDirection = Vector3.zero;
         }
     }
 
@@ -190,6 +191,22 @@ public class PlayerManager : MonoBehaviour
         else
         {
             changeSceneScript.ReloadScene();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Im triggerd by " + other.name);
+        
+        if(other.tag == "CheckPoint")
+        {
+            Debug.Log("It was a checkpoint!");
+            shrinking = true;
+        }
+
+        if(other.tag == "FinishLine")
+        {
+            shrinking = true;
         }
     }
 }
