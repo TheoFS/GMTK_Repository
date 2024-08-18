@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [SerializeField] GameObject optionsMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
 
     private void Start()
@@ -16,10 +17,19 @@ public class MainMenuManager : MonoBehaviour
         changeSceneBehaviourScript.ChangeScene("TemplateScene");
     }
 
+    public void OptionsButton()
+    {
+       optionsMenu.SetActive(true);
+    }
+
     public void QuitButton()
     {
         Application.Quit();
     }
 
+    public void ReturnButton()
+    {
+        optionsMenu.SetActive(false);
+    }
 
 }
