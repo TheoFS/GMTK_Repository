@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 8052941285364502154}
   - component: {fileID: 1101046274644514816}
   - component: {fileID: 3463026200007587246}
+  - component: {fileID: 6638449871641513723}
+  - component: {fileID: 4913682979497345729}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -151,10 +153,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c4cce589d891c4f83991c6abeb192e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevelName: 
   wienerPoints: 20
   defeated: 0
-  contracting: 0
+  victorious: 0
+  shrinking: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
   torsoList: []
   hopDuration: 0.25
+  shrinkDuration: 0.2
   defeatDuration: 1
+  victoryDuration: 0
   torsoPrefab: {fileID: 4983670735599490102, guid: aa45f46bc9384eb419533350e8860d08, type: 3}
+  currentDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &6638449871641513723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760377417513447423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214903fcfe379034c8bc50b34eef206d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &4913682979497345729
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5760377417513447423}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2

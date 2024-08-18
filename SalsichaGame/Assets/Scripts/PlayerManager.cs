@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public string nextLevelName;
     public int wienerPoints;
-    public bool defeated, shrinking;
+    public bool defeated, victorious, shrinking;
     public LayerMask layerMask;
     public List<GameObject> torsoList;
 
@@ -15,6 +16,8 @@ public class PlayerManager : MonoBehaviour
     float shrinkDuration;
     [SerializeField]
     float defeatDuration;
+    [SerializeField]
+    float victoryDuration;
     [SerializeField]
     GameObject torsoPrefab;
 
@@ -28,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     public Vector3 currentDirection;
 
-    float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer;
+    float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer, victoryTimer;
 
     int torsoIndex;
 
@@ -175,18 +178,40 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            shrinking = false;
-            torsoIndex = 0;          
-            torsoList.Clear();
-            newDirection = Vector3.zero;
+            if (victorious)
+            {
+                newDirection = Vector3.zero;
+                ManageVictory();
+            }
+            else
+            {
+                shrinking = false;
+                torsoIndex = 0;
+                torsoList.Clear();
+                newDirection = Vector3.zero;
+            }
+            
         }
     }
 
+    private void ManageVictory()
+    {
+        if (victoryTimer < victoryDuration)
+        {
+            victoryTimer += Time.deltaTime;
+            //Comporamentos de VITÓRIA!!!
+        }
+        else
+        {
+            changeSceneScript.ChangeScene(nextLevelName);
+        }
+    }
     private void ManageDefeat()
     {        
         if(defeatTimer < defeatDuration)
         {
             defeatTimer += Time.deltaTime;
+            //COMPORTAMENTOS DE DERROTA!
         }
         else
         {
@@ -207,6 +232,7 @@ public class PlayerManager : MonoBehaviour
         if(other.tag == "FinishLine")
         {
             shrinking = true;
+            victorious = true;
         }
     }
 }
