@@ -10,4 +10,8 @@ public class ChangeSceneBehaviour: MonoBehaviour
         SceneManager.LoadScene(_sceneName);
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

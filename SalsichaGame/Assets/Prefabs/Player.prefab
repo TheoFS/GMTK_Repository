@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3463026200007587246}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,4 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c4cce589d891c4f83991c6abeb192e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wienerPoints: 20
+  defeated: 0
+  contracting: 0
+  torsoList: []
   hopDuration: 0.25
+  defeatDuration: 1
+  torsoPrefab: {fileID: 4983670735599490102, guid: aa45f46bc9384eb419533350e8860d08, type: 3}
