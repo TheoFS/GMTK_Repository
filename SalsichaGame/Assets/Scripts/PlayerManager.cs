@@ -5,40 +5,24 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public int wienerPoints;
-    public bool defeated, shrinking;
-
-    public List<GameObject> torsoList;
+    public bool defeated;
 
     [SerializeField]
     float hopDuration;
-    [SerializeField]
-    float shrinkDuration;
     [SerializeField]
     float defeatDuration;
     [SerializeField]
     GameObject torsoPrefab;
 
-
-
-    GameObject tailObject;
-
-    ChangeSceneBehaviour changeSceneScript;
-
     Vector3 newDirection, currentDirection, lastPosition, currentPosition, newPosition;
 
-    float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer;
-
-    int torsoIndex;
-
+    float hopTimer, inputX, inputZ, defeatTimer;
 
     // Start is called before the first frame update
     void Start()
     {
         //Mais tarde associar isso com a posição do check point
         lastPosition = new Vector3(-10, 0, -10);
-
-        tailObject = GameObject.FindGameObjectWithTag("Tail");
-        changeSceneScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<ChangeSceneBehaviour>();        
     }
 
     // Update is called once per frame
@@ -47,40 +31,31 @@ public class PlayerManager : MonoBehaviour
         GetPlayerInput();
         DefineMovementDirection();
 
-        if(!EmptyNewPosition() || wienerPoints <= 0)
-        {
-            defeated = true;
-            Debug.Log("Defeated");
-        }
-        
         if (!defeated)
         {
-            if (!shrinking)
+            if (hopTimer < hopDuration)
             {
-                if (hopTimer < hopDuration)
-                {
-                    hopTimer += Time.deltaTime;
-                }
-                else
-                {
-                    //...caso tenha uma direção ele se move nessa direção.
-                    if (currentDirection != Vector3.zero)
-                    {
-                        Strech();
-                        Hop();
-                    }
-                    //...do contrário fica parado.
-                    hopTimer = 0f;
-                }
+                hopTimer += Time.deltaTime;
             }
             else
             {
-                Shrink();
+                if (EmptyNewPosition() && currentDirection != Vector3.zero && wienerPoints > 0)
+                {
+                    Strech();
+                    Hop();
+                }
+                else
+                {
+                    //Comportamento de derrota
+                    //Defeat();
+                }
+
+                hopTimer = 0f;
             }
         }
         else
         {
-            ManageDefeat();
+            //Defeat();
         }
     }
 
@@ -93,7 +68,7 @@ public class PlayerManager : MonoBehaviour
 
     private void DefineMovementDirection()
     {
-        //if (!contracting) { }
+        
 
         if(inputX != 0f || inputZ != 0f)
         {
@@ -106,11 +81,10 @@ public class PlayerManager : MonoBehaviour
                 newDirection = new Vector3(0, 0, inputZ);
             }
         }
-        /*
         else
         {
 
-        }*/
+        }
 
         //Se a nova direção não for para trás, ou seja o cão não estiver voltando, ele pode mudar sua direção.
         if(transform.position + newDirection != lastPosition)
@@ -122,10 +96,10 @@ public class PlayerManager : MonoBehaviour
     
     private bool  EmptyNewPosition()
     {
-        if (Physics.Raycast(transform.position, currentDirection, out RaycastHit hitInfo, 1f))
+        if(Physics.Raycast(transform.position, currentDirection, out RaycastHit hitInfo, 1f))
         {
             Debug.Log("I hit the " + hitInfo.collider.name);
-            return false;            
+            return false;
         }
         else
         {
@@ -136,12 +110,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Strech()
     {
-        GameObject newTorso;
-        
-        newTorso = Object.Instantiate(torsoPrefab, transform.position, transform.rotation);
-
-        torsoList.Add(newTorso);
-
+        Object.Instantiate(torsoPrefab, transform.position, transform.rotation);
         wienerPoints--;
     }
     private void Hop()
@@ -151,45 +120,15 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    private void Shrink()
+    private void Defeat()
     {
-        if (torsoIndex < torsoList.Count)
-        {
-            if (shrinkTimer < shrinkDuration)
-            {
-                shrinkTimer += Time.deltaTime;
-            }
-            else
-            {
-                //GameObject torsoBit = torsoList[0];
-                tailObject.transform.position = torsoList[torsoIndex].transform.position;
-                torsoList[torsoIndex].GetComponent<BoxCollider>().enabled = false;
-                torsoList[torsoIndex].transform.localScale = Vector3.zero;           
-                shrinkTimer = 0f;
-                torsoIndex++;
-            }
-        }
-        else
-        {
-            shrinking = false;
-            torsoIndex = 0;
-            /*for( int i = 0; i < torsoList.Count; i++)
-            {
-                GameObject.Destroy(torsoList[i]);
-            }*/
-            torsoList.Clear();
-        }
-    }
-
-    private void ManageDefeat()
-    {        
         if(defeatTimer < defeatDuration)
         {
-            defeatTimer += Time.deltaTime;
+
         }
         else
         {
-            changeSceneScript.ReloadScene();
+
         }
     }
 }
