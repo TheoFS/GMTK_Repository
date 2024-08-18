@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject creditsMenu;
+    [SerializeField] GameObject controlsMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
 
     private void Start()
@@ -30,6 +32,28 @@ public class MainMenuManager : MonoBehaviour
     public void ReturnButton()
     {
         optionsMenu.SetActive(false);
+    }
+
+    public void CreditsButton()
+    {
+        creditsMenu.SetActive(true);
+    }
+
+    public void CreditsReturn()
+    {
+        optionsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+    }
+
+    public void ControlsButton()
+    {
+        controlsMenu.SetActive(true);
+    }
+
+    public void ControlsReturn()
+    {
+        optionsMenu.SetActive(false);
+        controlsMenu.SetActive(false);
     }
 
 }
