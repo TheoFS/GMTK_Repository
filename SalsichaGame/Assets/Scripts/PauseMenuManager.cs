@@ -5,7 +5,6 @@ using UnityEngine;
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] GameObject settingsMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
     HUDManager hudManagerScript;
 
@@ -13,8 +12,6 @@ public class PauseMenuManager : MonoBehaviour
     {
         changeSceneBehaviourScript = GetComponent<ChangeSceneBehaviour>();
         hudManagerScript = GameObject.FindGameObjectWithTag("Hud").GetComponent<HUDManager>();
-        pauseMenu.SetActive(false);
-        settingsMenu.SetActive(false);
     }
 
     public void Resume()
@@ -32,15 +29,5 @@ public class PauseMenuManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
-    }
-
-    public void Settings()
-    {
-        settingsMenu.SetActive(true);
-    }
-
-    public void ReturnSettings()
-    {
-        settingsMenu.SetActive(false);
     }
 }

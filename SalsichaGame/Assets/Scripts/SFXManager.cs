@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SFXManager : MonoBehaviour
 {
@@ -25,17 +24,13 @@ public class SFXManager : MonoBehaviour
         }
     }
 
-    public static void PlaySFX(string soundName)
+    public static void PlaySFX(string soundName, float volume)
     {
         AudioClip audioClip = sfxLibraryManager.GetRandomClip(soundName);
         if (audioClip != null)
         {
+            audioSource.volume = volume;
             audioSource.PlayOneShot(audioClip);
         }
-    }
-
-    public static void SetVolume(float volume)
-    {
-        audioSource.volume = volume;
     }
 }
