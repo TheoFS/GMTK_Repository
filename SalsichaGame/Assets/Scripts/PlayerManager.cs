@@ -176,18 +176,33 @@ public class PlayerManager : MonoBehaviour
                     //...e estava descendo no último torso.
                     if (lastTorsoDirection.z == -1)
                     {
-                        newTorso.transform.eulerAngles = new Vector3(90, 90, 0);
-                        Debug.Log("Rotated!!");
+                        newTorso.transform.eulerAngles = new Vector3(90, 90, 0);                        
                     }
-                    /*
-                    else if() 
+                    
+                    else if(lastTorsoDirection.z == 1) 
                     {
-                        
-                    }*/
+                        newTorso.transform.eulerAngles = new Vector3(90, 180, 0);
+                    }
+                }
+                //...se ojogador estiver indo para a esquerda...
+                else if(currentDirection.x == -1)
+                {
+                    //...e estava descendo no último torso.
+                    if (lastTorsoDirection.z == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                    }
+                    //...estava subindo no ultimo torso.
+                    else if (lastTorsoDirection.z == 1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 180, 0);
+                        torsoScript.spriteRenderer.flipX = true;
+                    }
                 }
             }
             else
             {
+                //...estava sunindo.
                 if(currentDirection.z == 1)
                 {
                     if (lastTorsoDirection.x == 1)
@@ -197,6 +212,19 @@ public class PlayerManager : MonoBehaviour
                     else if(lastTorsoDirection.x == -1)
                     {
                         newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                        torsoScript.spriteRenderer.flipX = true;
+                    }
+                }
+                //...estava descendo
+                else if(currentDirection.z == -1)
+                {
+                    if (lastTorsoDirection.x == 1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, -90, 0);
+                    }
+                    else if (lastTorsoDirection.x == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 90, 0);
                         torsoScript.spriteRenderer.flipX = true;
                     }
                 }
