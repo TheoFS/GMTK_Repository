@@ -8,11 +8,14 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject optionsMenu;
     [SerializeField] GameObject creditsMenu;
     [SerializeField] GameObject controlsMenu;
+    [SerializeField] GameObject settingsMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
 
     private void Start()
     {
         changeSceneBehaviourScript = GetComponent<ChangeSceneBehaviour>();
+        optionsMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
     public void PlayButton()
     {
@@ -56,4 +59,14 @@ public class MainMenuManager : MonoBehaviour
         controlsMenu.SetActive(false);
     }
 
+    public void SettingsButton()
+    {
+        settingsMenu.SetActive(true);
+    }
+
+    public void ReturnSettings()
+    {
+        settingsMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+    }
 }

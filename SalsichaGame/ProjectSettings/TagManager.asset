@@ -9,6 +9,8 @@ TagManager:
   - Tail
   - CheckPoint
   - FinishLine
+  - SFX
+  - Music
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class HUDManager : MonoBehaviour
     public Slider wienerBar;
 
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject settingsMenu;
     PlayerManager playerManagerScript;
 
     public bool gameIsPaused = false;
@@ -33,6 +34,7 @@ public class HUDManager : MonoBehaviour
             else
             {
                 pauseMenu.SetActive(false);
+                settingsMenu.SetActive(false);
                 Time.timeScale = 1f;
                 gameIsPaused = false;
             }
