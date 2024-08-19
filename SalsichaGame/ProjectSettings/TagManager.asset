@@ -7,6 +7,10 @@ TagManager:
   - Hud
   - Canvas
   - Tail
+  - CheckPoint
+  - FinishLine
+  - SFX
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -14,9 +18,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Checkpoint
+  - Obstacle
+  - FinishLine
   - 
   - 
   - 
