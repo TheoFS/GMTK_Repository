@@ -14,4 +14,9 @@ public class Torso : MonoBehaviour
     {
         torsoSpriteRenderer.GetComponent<SpriteRenderer>();
     }*/
+
+    public void SetDirection(Vector3 _direction)
+    {
+        direction = _direction;
+    }
 }

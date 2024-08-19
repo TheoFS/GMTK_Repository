@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
 
     ChangeSceneBehaviour changeSceneScript;
 
-    Vector3 newDirection, lastDirection,lastPosition,currentPosition, newPosition;
+    Vector3 newDirection, lastDirection,lastPosition,lastTorsoDirection, currentPosition, newPosition;
 
     public Vector3 currentDirection;
 
@@ -158,17 +158,54 @@ public class PlayerManager : MonoBehaviour
         
         Torso torsoScript = newTorso.GetComponent<Torso>();
 
-        torsoList.Add(newTorso);
-
-        //Se a direção atual for diferente da direção do último torso...
-        if (torsoList.Count > 1 &&  currentDirection != torsoList[torsoList.Count - 1].GetComponent<Torso>().direction)
-        {
-            torsoScript.spriteRenderer.sprite = curveSprite;
-        }
-        
-
         torsoScript.direction = currentDirection;
 
+        torsoList.Add(newTorso);               
+
+        //Se a direção atual for diferente da direção do último torso...
+        if (torsoList.Count > 1 &&  torsoScript.direction != lastTorsoDirection)
+        {            
+            torsoScript.spriteRenderer.sprite = curveSprite;
+            
+            //Movimento Horizontal
+            if(currentDirection.z == 0)
+            {
+                //Se o jogador estiver indo para a direita...
+                if (currentDirection.x == 1)
+                {
+                    //...e estava descendo no último torso.
+                    if (lastTorsoDirection.z == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 90, 0);
+                        Debug.Log("Rotated!!");
+                    }
+                    /*
+                    else if() 
+                    {
+                        
+                    }*/
+                }
+            }
+            else
+            {
+                if(currentDirection.z == 1)
+                {
+                    if (lastTorsoDirection.x == 1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                    }
+                    else if(lastTorsoDirection.x == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                        torsoScript.spriteRenderer.flipX = true;
+                    }
+                }
+            }
+            
+        }
+
+        lastTorsoDirection =  torsoScript.direction;
+        
         wienerPoints--;
     }
     private void Hop()
@@ -274,6 +311,11 @@ public class PlayerManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void CalculateCurveRotation()
+    {
+
     }
 
     private void ManageVictory()
