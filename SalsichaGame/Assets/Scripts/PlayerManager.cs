@@ -35,7 +35,9 @@ public class PlayerManager : MonoBehaviour
 
     Vector3 newDirection, lastDirection,lastPosition,lastTorsoDirection, currentPosition, newPosition;
 
-    public Vector3 currentDirection;
+    Vector3 currentDirection, currentRotation;
+
+    bool currentFrontFlip;
 
     float hopTimer, shrinkTimer, inputX, inputZ, defeatTimer, victoryTimer;
 
@@ -48,7 +50,10 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         //Mais tarde associar isso com a posição do check point
-        lastPosition = new Vector3(-10, 0, -10);        
+        lastPosition = new Vector3(-10, 0, -10);
+
+
+        currentRotation = new Vector3(90, 0, 0);
 
         tailObject = GameObject.FindGameObjectWithTag("Tail");
         changeSceneScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<ChangeSceneBehaviour>();
@@ -69,7 +74,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         DefineMovementDirection();
-        ManageSpriteRotation();
+        //ManageSnootRotation();
 
         if (!defeated)
         {
@@ -78,14 +83,17 @@ public class PlayerManager : MonoBehaviour
                 if (hopTimer < hopDuration)
                 {
                     hopTimer += Time.deltaTime;
+                    ManageSnootRotation();
                 }
                 else
                 {
-                   
+                    
                     //...caso tenha uma direção ele se move nessa direção.
                     if (currentDirection != Vector3.zero)
                     {
-                        //frontGFX.transform.eulerAngles = currentRotation;
+                        
+                        frontGFX.transform.eulerAngles = currentRotation;
+                        frontSPriteRenderer.flipX = currentFrontFlip;
                         Strech();                        
                         Hop();                        
                     }
@@ -162,8 +170,14 @@ public class PlayerManager : MonoBehaviour
 
         torsoList.Add(newTorso);               
 
+        if(lastTorsoDirection == Vector3.zero)
+        {
+            lastTorsoDirection = Vector3.right;
+        }
+
+
         //Se a direção atual for diferente da direção do último torso...
-        if (torsoList.Count > 1 &&  torsoScript.direction != lastTorsoDirection)
+        if (torsoScript.direction != lastTorsoDirection)
         {            
             torsoScript.spriteRenderer.sprite = curveSprite;
             
@@ -279,7 +293,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void ManageSpriteRotation()
+    private void ManageSnootRotation()
     {
         ////////////////////////Parte da Frente
         if(lastDirection == Vector3.zero)
@@ -291,19 +305,18 @@ public class PlayerManager : MonoBehaviour
         if(currentDirection.z == 0)
         {
             //Reseta a rotação do sprite.
-            if(frontGFX.transform.rotation.y != 0f)
-            {
-                frontGFX.transform.eulerAngles = new Vector3(90, 0, 0);
-            }
+            currentRotation = new Vector3(90, 0, 0);
 
             //Flipa o sprite caso esteja indo para a esquerda.
-            if(currentDirection.x == 1 && frontSPriteRenderer.flipX == true)
+            if (currentDirection.x == 1 && frontSPriteRenderer.flipX == true)
             {
-                frontSPriteRenderer.flipX = false;
+                //frontSPriteRenderer.flipX = false;
+                currentFrontFlip = false;
             }
             else if(currentDirection.x == -1 && frontSPriteRenderer.flipX == false)
             {
-                frontSPriteRenderer.flipX = true;
+                //frontSPriteRenderer.flipX = true;
+                currentFrontFlip = true;
             }
         }
         //Movimento Vertical
@@ -315,13 +328,13 @@ public class PlayerManager : MonoBehaviour
                 //Se veio da direita.
                 if(lastDirection.x == 1)
                 {
-                    frontGFX.transform.eulerAngles = new Vector3(90, -90,0);
-                    //currentRotation = new Vector3(90, -90, 0);
+                    //frontGFX.transform.eulerAngles = new Vector3(90, -90,0);
+                    currentRotation = new Vector3(90, -90, 0);
                 }
                 else if(lastDirection.x == -1)
                 {
-                    frontGFX.transform.eulerAngles = new Vector3(90, 90, 0);
-                    //currentRotation = new Vector3(90, 90, 0);
+                    //frontGFX.transform.eulerAngles = new Vector3(90, 90, 0);
+                    currentRotation = new Vector3(90, 90, 0);
                 }
             }
             else if(currentDirection.z == -1)
@@ -329,22 +342,19 @@ public class PlayerManager : MonoBehaviour
                 //Se veio da direita.
                 if (lastDirection.x == 1)
                 {
-                    frontGFX.transform.eulerAngles = new Vector3(90, 90, 0);
-                    //currentRotation = new Vector3(90, 90, 0);
+                    //frontGFX.transform.eulerAngles = new Vector3(90, 90, 0);
+                    currentRotation = new Vector3(90, 90, 0);
                 }
                 else if (lastDirection.x == -1)
                 {
-                    frontGFX.transform.eulerAngles = new Vector3(90, -90, 0);
-                    //currentRotation = new Vector3(90, -90, 0);
+                    //frontGFX.transform.eulerAngles = new Vector3(90, -90, 0);
+                    currentRotation = new Vector3(90, -90, 0);
                 }
             }
         }
     }
 
-    private void CalculateCurveRotation()
-    {
-
-    }
+    
 
     private void ManageVictory()
     {
