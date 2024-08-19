@@ -168,7 +168,7 @@ MonoBehaviour:
   defeatDuration: 1
   victoryDuration: 1
   torsoPrefab: {fileID: 4983670735599490102, guid: aa45f46bc9384eb419533350e8860d08, type: 3}
-  curveSprite: {fileID: 21300000, guid: 56c6d71541acf404a92c0061b9d73c98, type: 3}
+  curveSprite: {fileID: 21300000, guid: 7525543390d26b142b91a9cd85d9d57a, type: 3}
   currentDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &6638449871641513723
 MonoBehaviour:
