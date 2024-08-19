@@ -19,6 +19,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     float defeatDuration;
     [SerializeField]
+    float shrinkDuration;
+    [SerializeField]
     float victoryDuration;
     [SerializeField]
     GameObject torsoPrefab;
