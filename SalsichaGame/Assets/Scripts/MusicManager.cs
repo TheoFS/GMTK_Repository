@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class SFXManager : MonoBehaviour
+public class MusicManager : MonoBehaviour
 {
-    private static SFXManager Instance;
+    private static MusicManager Instance;
 
     private static AudioSource audioSource;
-    private static SFXLibraryManager sfxLibraryManager;
+    private static MusicLibraryManager musicLibraryManager;
 
     private void Awake()
     {
@@ -16,7 +15,7 @@ public class SFXManager : MonoBehaviour
         {
             Instance = this;
             audioSource = GetComponent<AudioSource>();
-            sfxLibraryManager = GetComponent<SFXLibraryManager>();
+            musicLibraryManager = GetComponent<MusicLibraryManager>();
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -27,7 +26,7 @@ public class SFXManager : MonoBehaviour
 
     public static void PlaySFX(string soundName)
     {
-        AudioClip audioClip = sfxLibraryManager.GetRandomClip(soundName);
+        AudioClip audioClip = musicLibraryManager.GetRandomClip(soundName);
         if (audioClip != null)
         {
             audioSource.PlayOneShot(audioClip);
