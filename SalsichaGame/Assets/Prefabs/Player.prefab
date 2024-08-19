@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 1241264755117417864}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.085, y: 0.085, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8052941285364502154}
@@ -72,13 +72,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 6a3432ef21f93d74a917215b409f48fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -161,12 +161,14 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
+  frontGFX: {fileID: 1241264755117417864}
   torsoList: []
   hopDuration: 0.25
   shrinkDuration: 0.2
   defeatDuration: 1
   victoryDuration: 1
   torsoPrefab: {fileID: 4983670735599490102, guid: aa45f46bc9384eb419533350e8860d08, type: 3}
+  curveSprite: {fileID: 21300000, guid: 56c6d71541acf404a92c0061b9d73c98, type: 3}
   currentDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &6638449871641513723
 MonoBehaviour:
