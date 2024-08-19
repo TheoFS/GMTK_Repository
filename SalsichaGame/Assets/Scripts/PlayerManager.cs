@@ -8,7 +8,11 @@ public class PlayerManager : MonoBehaviour
     public int wienerPoints;
     public bool defeated, victorious, shrinking;
     public LayerMask layerMask;
+    public GameObject frontGFX;
+    SpriteRenderer frontSPriteRenderer;
+
     public List<GameObject> torsoList;
+
 
     [SerializeField]
     float hopDuration;
@@ -18,6 +22,8 @@ public class PlayerManager : MonoBehaviour
     float victoryDuration;
     [SerializeField]
     GameObject torsoPrefab;
+    [SerializeField]
+    Sprite curveSprite;
 
 
 
@@ -25,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     ChangeSceneBehaviour changeSceneScript;
 
-    Vector3 newDirection, lastPosition, currentPosition, newPosition;
+    Vector3 newDirection, lastDirection,lastPosition,lastTorsoDirection, currentPosition, newPosition;
 
     public Vector3 currentDirection;
 
@@ -33,19 +39,26 @@ public class PlayerManager : MonoBehaviour
 
     int torsoIndex;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
     {
         //Mais tarde associar isso com a posi��o do check point
-        lastPosition = new Vector3(-10, 0, -10);
+        lastPosition = new Vector3(-10, 0, -10);        
+
+        tailObject = GameObject.FindGameObjectWithTag("Tail");
+        changeSceneScript = GameObject.FindGameObjectWithTag("Canvas").GetComponent<ChangeSceneBehaviour>();
+        frontSPriteRenderer = frontGFX.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         GetPlayerInput();
-        
+
+       
 
         if(!EmptyNewPosition() || wienerPoints <= 0)
         {
@@ -54,12 +67,29 @@ public class PlayerManager : MonoBehaviour
         }
 
         DefineMovementDirection();
+        ManageSpriteRotation();
 
         if (!defeated)
         {
             if (hopTimer < hopDuration)
             {
-                hopTimer += Time.deltaTime;
+                if (hopTimer < hopDuration)
+                {
+                    hopTimer += Time.deltaTime;
+                }
+                else
+                {
+                   
+                    //...caso tenha uma dire��o ele se move nessa dire��o.
+                    if (currentDirection != Vector3.zero)
+                    {
+                        //frontGFX.transform.eulerAngles = currentRotation;
+                        Strech();                        
+                        Hop();                        
+                    }
+                    //...do contr�rio fica parado.
+                    hopTimer = 0f;
+                }
             }
             else
             {
@@ -91,8 +121,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     private void DefineMovementDirection()
-    {
-        
+    {       
 
         if(inputX != 0f || inputZ != 0f)
         {
@@ -105,14 +134,12 @@ public class PlayerManager : MonoBehaviour
                 newDirection = new Vector3(0, 0, inputZ);
             }
         }
-        else
-        {
-
-        }
+       
 
         //Se a nova dire��o n�o for para tr�s, ou seja o c�o n�o estiver voltando, ele pode mudar sua dire��o.
         if(transform.position + newDirection != lastPosition)
         {
+            lastDirection = currentDirection;
             currentDirection = newDirection;
         }
     }
@@ -134,7 +161,88 @@ public class PlayerManager : MonoBehaviour
 
     private void Strech()
     {
-        Object.Instantiate(torsoPrefab, transform.position, transform.rotation);
+        GameObject newTorso;
+
+        newTorso = Object.Instantiate(torsoPrefab, transform.position, frontGFX.transform.rotation);      
+        
+        Torso torsoScript = newTorso.GetComponent<Torso>();
+
+        torsoScript.direction = currentDirection;
+
+        torsoList.Add(newTorso);               
+
+        //Se a dire��o atual for diferente da dire��o do �ltimo torso...
+        if (torsoList.Count > 1 &&  torsoScript.direction != lastTorsoDirection)
+        {            
+            torsoScript.spriteRenderer.sprite = curveSprite;
+            
+            //Movimento Horizontal
+            if(currentDirection.z == 0)
+            {
+                //Se o jogador estiver indo para a direita...
+                if (currentDirection.x == 1)
+                {
+                    //...e estava descendo no �ltimo torso.
+                    if (lastTorsoDirection.z == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 90, 0);                        
+                    }
+                    
+                    else if(lastTorsoDirection.z == 1) 
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 180, 0);
+                    }
+                }
+                //...se ojogador estiver indo para a esquerda...
+                else if(currentDirection.x == -1)
+                {
+                    //...e estava descendo no �ltimo torso.
+                    if (lastTorsoDirection.z == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                    }
+                    //...estava subindo no ultimo torso.
+                    else if (lastTorsoDirection.z == 1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 180, 0);
+                        torsoScript.spriteRenderer.flipX = true;
+                    }
+                }
+            }
+            else
+            {
+                //...estava sunindo.
+                if(currentDirection.z == 1)
+                {
+                    if (lastTorsoDirection.x == 1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                    }
+                    else if(lastTorsoDirection.x == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 0, 0);
+                        torsoScript.spriteRenderer.flipX = true;
+                    }
+                }
+                //...estava descendo
+                else if(currentDirection.z == -1)
+                {
+                    if (lastTorsoDirection.x == 1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, -90, 0);
+                    }
+                    else if (lastTorsoDirection.x == -1)
+                    {
+                        newTorso.transform.eulerAngles = new Vector3(90, 90, 0);
+                        torsoScript.spriteRenderer.flipX = true;
+                    }
+                }
+            }
+            
+        }
+
+        lastTorsoDirection =  torsoScript.direction;
+        
         wienerPoints--;
     }
     private void Hop()
@@ -178,6 +286,73 @@ public class PlayerManager : MonoBehaviour
             }
             
         }
+    }
+
+    private void ManageSpriteRotation()
+    {
+        ////////////////////////Parte da Frente
+        if(lastDirection == Vector3.zero)
+        {
+            lastDirection = new Vector3(1, 0, 0);
+        }
+        
+        //Movimento Horizontal 
+        if(currentDirection.z == 0)
+        {
+            //Reseta a rota��o do sprite.
+            if(frontGFX.transform.rotation.y != 0f)
+            {
+                frontGFX.transform.eulerAngles = new Vector3(90, 0, 0);
+            }
+
+            //Flipa o sprite caso esteja indo para a esquerda.
+            if(currentDirection.x == 1 && frontSPriteRenderer.flipX == true)
+            {
+                frontSPriteRenderer.flipX = false;
+            }
+            else if(currentDirection.x == -1 && frontSPriteRenderer.flipX == false)
+            {
+                frontSPriteRenderer.flipX = true;
+            }
+        }
+        //Movimento Vertical
+        else
+        {
+            //Se estiver subindo
+            if(currentDirection.z == 1)
+            {
+                //Se veio da direita.
+                if(lastDirection.x == 1)
+                {
+                    frontGFX.transform.eulerAngles = new Vector3(90, -90,0);
+                    //currentRotation = new Vector3(90, -90, 0);
+                }
+                else if(lastDirection.x == -1)
+                {
+                    frontGFX.transform.eulerAngles = new Vector3(90, 90, 0);
+                    //currentRotation = new Vector3(90, 90, 0);
+                }
+            }
+            else if(currentDirection.z == -1)
+            {
+                //Se veio da direita.
+                if (lastDirection.x == 1)
+                {
+                    frontGFX.transform.eulerAngles = new Vector3(90, 90, 0);
+                    //currentRotation = new Vector3(90, 90, 0);
+                }
+                else if (lastDirection.x == -1)
+                {
+                    frontGFX.transform.eulerAngles = new Vector3(90, -90, 0);
+                    //currentRotation = new Vector3(90, -90, 0);
+                }
+            }
+        }
+    }
+
+    private void CalculateCurveRotation()
+    {
+
     }
 
     private void ManageVictory()
