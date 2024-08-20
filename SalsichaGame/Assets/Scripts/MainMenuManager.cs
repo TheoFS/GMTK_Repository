@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject creditsMenu;
     [SerializeField] GameObject controlsMenu;
     [SerializeField] GameObject settingsMenu;
+    [SerializeField] GameObject licensesMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
 
     private void Start()
@@ -67,6 +68,23 @@ public class MainMenuManager : MonoBehaviour
     public void ReturnSettings()
     {
         settingsMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+    }
+
+    public void Page1Button()
+    {
+        licensesMenu.SetActive(false);
+    }
+
+    public void Page2Button()
+    {
+        licensesMenu.SetActive(true);
+    }
+
+    public void ReturnLicenses()
+    {
+        licensesMenu.SetActive(false);
+        creditsMenu.SetActive(false);
         optionsMenu.SetActive(false);
     }
 }
