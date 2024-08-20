@@ -10,6 +10,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject settingsMenu;
     PlayerManager playerManagerScript;
+    SFXManager sfxManagerScript;
 
     public bool gameIsPaused = false;
 
