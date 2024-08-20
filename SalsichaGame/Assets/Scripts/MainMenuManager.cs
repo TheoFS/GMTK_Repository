@@ -53,7 +53,7 @@ public class MainMenuManager : MonoBehaviour
     {
         MusicManager.StopMusic();
         sfxManagerScript.endgame = false;
-        changeSceneBehaviourScript.ChangeScene("TemplateScene");
+        changeSceneBehaviourScript.ChangeScene("Level-1");
     }
 
     public void OptionsButton()
