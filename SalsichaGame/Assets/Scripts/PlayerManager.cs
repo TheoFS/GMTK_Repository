@@ -269,6 +269,36 @@ public class PlayerManager : MonoBehaviour
             {
                 //GameObject torsoBit = torsoList[0];
                 tailObject.transform.position = torsoList[torsoIndex].transform.position;
+                //Rotation
+                Vector3 currentTorsoDirection = torsoList[torsoIndex].GetComponent<Torso>().direction; 
+                if(currentTorsoDirection.z == 0)
+                {
+                    tailObject.GetComponent<Tail>().tailGFX.transform.eulerAngles = new Vector3(90, 0, 0);
+
+                    if (currentTorsoDirection.x == 1)
+                    {
+                        tailObject.GetComponent<Tail>().spriteRenderer.flipX = false;
+                        
+                    }
+                    else if(currentTorsoDirection.x == -1)
+                    {
+                        tailObject.GetComponent<Tail>().spriteRenderer.flipX = true;
+                    }
+                }
+                else
+                {
+                    tailObject.GetComponent<Tail>().spriteRenderer.flipX = false;
+                    if (currentTorsoDirection.z == 1)
+                    {
+                        tailObject.GetComponent<Tail>().tailGFX.transform.eulerAngles = new Vector3(90,-90,0);
+
+                    }
+                    else if (currentTorsoDirection.z == -1)
+                    {
+                        tailObject.GetComponent<Tail>().tailGFX.transform.eulerAngles = new Vector3(90, 90, 0);
+                    }
+                }
+                //tailObject.transform.eulerAngles = ;
                 torsoList[torsoIndex].GetComponent<BoxCollider>().enabled = false;
                 torsoList[torsoIndex].transform.localScale = Vector3.zero;           
                 shrinkTimer = 0f;
