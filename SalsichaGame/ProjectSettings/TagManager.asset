@@ -11,6 +11,7 @@ TagManager:
   - FinishLine
   - SFX
   - Music
+  - HotDog
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Checkpoint
   - Obstacle
   - FinishLine
-  - 
+  - HotDog
   - 
   - 
   - 

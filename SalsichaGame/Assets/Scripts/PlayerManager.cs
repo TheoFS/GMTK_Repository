@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         //Mais tarde associar isso com a posição do check point
-        lastPosition = new Vector3(-10, 0, -10);
+        //lastPosition = new Vector3(-10, 0, -10);
 
 
         currentRotation = new Vector3(90, 0, 0);
@@ -69,10 +69,11 @@ public class PlayerManager : MonoBehaviour
 
         if(!EmptyNewPosition() || wienerPoints <= 0)
         {
+            
             defeated = true;
             Debug.Log("Defeated");
         }
-
+        
         DefineMovementDirection();
         ManageSnootRotation();
 
@@ -310,6 +311,8 @@ public class PlayerManager : MonoBehaviour
             if (victorious)
             {
                 newDirection = Vector3.zero;
+                defeated = false;
+                Debug.Log("I win!!");
                 ManageVictory();
             }
             else
@@ -413,6 +416,13 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "FinishLine")
+        {
+            shrinking = true;
+            victorious = true;
+            defeated = false;
+        }
+
         Debug.Log("Im triggerd by " + other.name);
         
         if(other.tag == "CheckPoint")
@@ -421,10 +431,12 @@ public class PlayerManager : MonoBehaviour
             shrinking = true;
         }
 
-        if(other.tag == "FinishLine")
+        
+
+        if(other.tag == "HotDog")
         {
-            shrinking = true;
-            victorious = true;
+            wienerPoints = 20;
+            Destroy(other.gameObject);
         }
     }
 }
