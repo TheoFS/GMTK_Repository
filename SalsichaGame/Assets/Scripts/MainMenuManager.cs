@@ -11,15 +11,26 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject settingsMenu;
     [SerializeField] GameObject licensesMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
+    SFXManager sfxManagerScript;
 
     private bool menuMusicPlaying;
 
     private void Start()
     {
+        sfxManagerScript = GameObject.FindGameObjectWithTag("SFX").GetComponent<SFXManager>();
         changeSceneBehaviourScript = GetComponent<ChangeSceneBehaviour>();
-        optionsMenu.SetActive(false);
-        settingsMenu.SetActive(false);
         StartCoroutine(MenuMusicPlaying());
+
+        if (sfxManagerScript.endgame == true)
+        {
+            optionsMenu.SetActive(true);
+            creditsMenu.SetActive(true);
+        }
+        else
+        {
+            optionsMenu.SetActive(false);
+            settingsMenu.SetActive(false);
+        }
     }
 
     private void Update()
@@ -40,6 +51,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlayButton()
     {
+        MusicManager.StopMusic();
+        sfxManagerScript.endgame = false;
         changeSceneBehaviourScript.ChangeScene("TemplateScene");
     }
 

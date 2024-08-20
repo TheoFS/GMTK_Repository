@@ -10,6 +10,8 @@ public class SFXManager : MonoBehaviour
     private static AudioSource audioSource;
     private static SFXLibraryManager sfxLibraryManager;
 
+    public bool endgame = false;
+
     private void Awake()
     {
         if (Instance == null)
