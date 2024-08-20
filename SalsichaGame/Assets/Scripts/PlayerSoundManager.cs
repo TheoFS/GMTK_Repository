@@ -6,7 +6,8 @@ public class PlayerSoundManager : MonoBehaviour
 {
     PlayerManager playerManagerScript;
 
-    private bool damageSoundPlaying;
+    private bool damageSoundPlaying = false;
+    private bool victoriousPlaying = false;
 
     private void Start()
     {
@@ -19,6 +20,11 @@ public class PlayerSoundManager : MonoBehaviour
         {
             StartCoroutine(PlayerDamage());
         }
+
+        if (playerManagerScript.victorious & victoriousPlaying == false)
+        {
+            StartCoroutine(VictoriousSound());
+        }
     }
 
     IEnumerator PlayerDamage()
@@ -26,5 +32,12 @@ public class PlayerSoundManager : MonoBehaviour
         SFXManager.PlaySFX("DamageBark");
         damageSoundPlaying = true;
         yield return null;  
+    }
+
+    IEnumerator VictoriousSound()
+    {
+        SFXManager.PlaySFX("VictoryBark");
+        victoriousPlaying = true;
+        yield return null;
     }
 }

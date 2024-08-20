@@ -12,12 +12,32 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject licensesMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
 
+    private bool menuMusicPlaying;
+
     private void Start()
     {
         changeSceneBehaviourScript = GetComponent<ChangeSceneBehaviour>();
         optionsMenu.SetActive(false);
         settingsMenu.SetActive(false);
+        StartCoroutine(MenuMusicPlaying());
     }
+
+    private void Update()
+    {
+        if (menuMusicPlaying == false)
+        {
+            StartCoroutine(MenuMusicPlaying());
+        }
+    }
+
+    IEnumerator MenuMusicPlaying()
+    {
+        MusicManager.PlaySFX("Menu Music");
+        menuMusicPlaying = true;
+        yield return new WaitForSeconds(13.6f);
+        menuMusicPlaying = false;
+    }
+
     public void PlayButton()
     {
         changeSceneBehaviourScript.ChangeScene("TemplateScene");
@@ -41,6 +61,7 @@ public class MainMenuManager : MonoBehaviour
     public void CreditsButton()
     {
         creditsMenu.SetActive(true);
+        
     }
 
     public void CreditsReturn()

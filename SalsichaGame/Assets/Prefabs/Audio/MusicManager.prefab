@@ -48,7 +48,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -142,7 +142,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37604e35ce654634bb9aa9a54fb33d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffectGroups: []
+  soundEffectGroups:
+  - name: Menu Music
+    audioClips:
+    - {fileID: 8300000, guid: eed7beaeae024c84eadfe11ae86a5c24, type: 3}
+  - name: Credits Music
+    audioClips:
+    - {fileID: 8300000, guid: 53ab5c4359335b64781d69f6333ca8ab, type: 3}
+  - name: Game Music
+    audioClips: []
 --- !u!114 &7485572902465676302
 MonoBehaviour:
   m_ObjectHideFlags: 0
