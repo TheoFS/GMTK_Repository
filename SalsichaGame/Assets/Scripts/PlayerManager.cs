@@ -74,7 +74,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         DefineMovementDirection();
-        //ManageSnootRotation();
+        ManageSnootRotation();
 
         if (!defeated)
         {
@@ -83,7 +83,7 @@ public class PlayerManager : MonoBehaviour
                 if (hopTimer < hopDuration)
                 {
                     hopTimer += Time.deltaTime;
-                    ManageSnootRotation();
+                    
                 }
                 else
                 {
