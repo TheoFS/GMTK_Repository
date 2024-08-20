@@ -9,14 +9,35 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] GameObject creditsMenu;
     [SerializeField] GameObject controlsMenu;
     [SerializeField] GameObject settingsMenu;
+    [SerializeField] GameObject licensesMenu;
     ChangeSceneBehaviour changeSceneBehaviourScript;
+
+    private bool menuMusicPlaying;
 
     private void Start()
     {
         changeSceneBehaviourScript = GetComponent<ChangeSceneBehaviour>();
         optionsMenu.SetActive(false);
         settingsMenu.SetActive(false);
+        StartCoroutine(MenuMusicPlaying());
     }
+
+    private void Update()
+    {
+        if (menuMusicPlaying == false)
+        {
+            StartCoroutine(MenuMusicPlaying());
+        }
+    }
+
+    IEnumerator MenuMusicPlaying()
+    {
+        MusicManager.PlaySFX("Menu Music");
+        menuMusicPlaying = true;
+        yield return new WaitForSeconds(13.6f);
+        menuMusicPlaying = false;
+    }
+
     public void PlayButton()
     {
         changeSceneBehaviourScript.ChangeScene("TemplateScene");
@@ -40,6 +61,7 @@ public class MainMenuManager : MonoBehaviour
     public void CreditsButton()
     {
         creditsMenu.SetActive(true);
+        
     }
 
     public void CreditsReturn()
@@ -67,6 +89,23 @@ public class MainMenuManager : MonoBehaviour
     public void ReturnSettings()
     {
         settingsMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+    }
+
+    public void Page1Button()
+    {
+        licensesMenu.SetActive(false);
+    }
+
+    public void Page2Button()
+    {
+        licensesMenu.SetActive(true);
+    }
+
+    public void ReturnLicenses()
+    {
+        licensesMenu.SetActive(false);
+        creditsMenu.SetActive(false);
         optionsMenu.SetActive(false);
     }
 }
