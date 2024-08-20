@@ -49,8 +49,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Mais tarde associar isso com a posição do check point
-        //lastPosition = new Vector3(-10, 0, -10);
+        //Calcular onde a bunda do dog está.
+        lastPosition = new Vector3(transform.position.x - 1, 0, transform.position.z);
 
 
         currentRotation = new Vector3(90, 0, 0);
@@ -67,12 +67,6 @@ public class PlayerManager : MonoBehaviour
 
        
 
-        if(!EmptyNewPosition() || wienerPoints <= 0)
-        {
-            
-            defeated = true;
-            Debug.Log("Defeated");
-        }
         
         DefineMovementDirection();
         ManageSnootRotation();
@@ -88,9 +82,17 @@ public class PlayerManager : MonoBehaviour
                 }
                 else
                 {
-                    
+
+                    if (!EmptyNewPosition() || wienerPoints <= 0)
+                    {
+
+                        defeated = true;
+                        Debug.Log("Defeated");
+                    }
+
+
                     //...caso tenha uma direção ele se move nessa direção.
-                    if (currentDirection != Vector3.zero)
+                    if (currentDirection != Vector3.zero && !defeated)
                     {
                         
                         frontGFX.transform.eulerAngles = currentRotation;
